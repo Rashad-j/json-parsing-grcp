@@ -10,8 +10,6 @@ import (
 )
 
 func main() {
-	// ctx := context.Background()
-
 	// zerolog basic config
 	zerolog.TimeFieldFormat = zerolog.TimeFormatUnixMs
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stdout, TimeFormat: "2006-01-02 15:04:05"})

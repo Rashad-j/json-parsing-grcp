@@ -33,7 +33,7 @@ func TestOSFileProviderService_Bootstrap(t *testing.T) {
 	// arrange
 	cfg := &config.Config{
 		FilesDirectory: "testdata",
-		Extension:      ".json",
+		Extension:      "json",
 	}
 	fileCacheProvider := NewCache()
 	fileProvider, _ := NewOSFileProviderService(cfg, fileCacheProvider)
