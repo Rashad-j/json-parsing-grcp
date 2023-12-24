@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "rpc/parser";
+
+service JsonParsingService {
+  rpc ParseJsonFiles (EmptyRequest) returns (JsonResponse);
+}
+
+// request will be empty, just want to return json files
+message EmptyRequest {}
+
+message JsonResponse {
+  repeated Person personList = 1;
+
+  message Person {
+    string firstName = 1; // required
+    string lastName = 2; // required
+    string birthday = 3; // required
+    string address = 4; // required
+    string phoneNumber = 5; //required
+  }
+}
