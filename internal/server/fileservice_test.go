@@ -6,7 +6,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rashad-j/go-grpc-json-svc/config"
+	"github.com/rashad-j/go-grpc-json-svc/internal/config"
 	"github.com/stretchr/testify/assert"
 )
 

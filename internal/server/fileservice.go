@@ -8,7 +8,7 @@ import (
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/pkg/errors"
-	"github.com/rashad-j/go-grpc-json-svc/config"
+	"github.com/rashad-j/go-grpc-json-svc/internal/config"
 	"github.com/rs/zerolog/log"
 )
 

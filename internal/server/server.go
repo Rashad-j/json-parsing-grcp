@@ -9,7 +9,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/xid"
 
-	"github.com/rashad-j/go-grpc-json-svc/config"
+	"github.com/rashad-j/go-grpc-json-svc/internal/config"
 	"github.com/rashad-j/go-grpc-json-svc/rpc/parser"
 	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"

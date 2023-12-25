@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/rashad-j/go-grpc-json-svc/config"
+	"github.com/rashad-j/go-grpc-json-svc/internal/config"
 	"github.com/rashad-j/go-grpc-json-svc/internal/server"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"

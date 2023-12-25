@@ -4,8 +4,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/rashad-j/go-grpc-json-svc/config"
 	"github.com/rashad-j/go-grpc-json-svc/internal/client"
+	"github.com/rashad-j/go-grpc-json-svc/internal/config"
 	"github.com/rashad-j/go-grpc-json-svc/rpc/parser"
 )
 
