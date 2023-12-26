@@ -3,7 +3,7 @@ package config
 import "github.com/caarlos0/env"
 
 type Config struct {
-	Addr           string `env:"ADDR" envDefault:":8080"`
+	Addr           string `env:"ADDR" envDefault:":8081"`
 	FilesDirectory string `env:"FILES_DIR" envDefault:"./files"`
 	Extension      string `env:"EXTENSION"  envDefault:"json"`
 }

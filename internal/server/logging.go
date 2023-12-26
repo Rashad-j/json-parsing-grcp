@@ -52,8 +52,8 @@ func (s *loggerService) Bootstrap() error {
 func (s *loggerService) StartWatching() error {
 	log.Info().Msg("StartWatching called")
 	defer func(start time.Time) {
-		duration := time.Since(start)
-		log.Info().Dur("duration", duration).Msg("StartWatching is running in the background")
+		// duration := time.Since(start)
+		log.Info().Msg("StartWatching is running in the background")
 	}(time.Now())
 
 	return s.next.StartWatching()
