@@ -1,5 +1,5 @@
 gen:
-    protoc --go_out=. --go_opt=paths=source_relative \
+	protoc --go_out=. --go_opt=paths=source_relative \
     --go-grpc_out=. --go-grpc_opt=paths=source_relative \
     rpc/parser/parser.proto
 
@@ -13,7 +13,7 @@ grpcurl:
     grpcurl -plaintext -d '{}' localhost:8080 JsonParsingService.ParseJsonFiles
 
 loadEnv:
-    export $(cat .env | xargs)
+	export $(xargs < .env)
 
 checkIFEnvExists:
     ifeq (,$(wildcard .env))
@@ -22,5 +22,9 @@ checkIFEnvExists:
 
 dockerBuildRun: checkIFEnvExists
 	docker build -t json-parser . && \
-	docker run --rm -it -p 8080:8080 --env-file .env json-parser
+	docker run --rm -it -p 8081:8081 --env-file .env json-parser
 
+dockerPush: checkIFEnvExists loadEnv
+	docker build -t json-parser . && \
+	docker tag json-parser $(DOCKER_REGISTRY) && \
+	docker push $(DOCKER_REGISTRY):latest

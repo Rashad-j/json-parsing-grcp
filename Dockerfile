@@ -6,6 +6,6 @@ COPY . .
 
 RUN go build -o bin/server cmd/server/main.go
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["./bin/server"]
