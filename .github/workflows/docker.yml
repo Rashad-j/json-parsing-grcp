@@ -6,7 +6,7 @@ on:
       - "*"
 
 env:
-  DOCKER_IMAGE: grpcgateway
+  DOCKER_IMAGE: jsonparser
 
 jobs:
   buildx:
